@@ -1,0 +1,18 @@
+site_name: LAMig Group Blog
+site_url: https://mydomain.org/mysite
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.sections
+  palette:
+    - scheme: default
+      toggle: 
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
