@@ -12,4 +12,4 @@ This is the group blog of team LAMig of CS 191 WFR1 2526.1.
 
 **PDF Links to Deliverables:**
 
-- Project Plan: Work in Progress (Due date: Aug 31, 2025)
+- Project Plan: [SALN App Project Plan.pdf](files/SALN%20App%20Project%20Plan.pdf)
