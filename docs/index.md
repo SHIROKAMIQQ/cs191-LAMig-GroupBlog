@@ -15,3 +15,5 @@ This is the group blog of team LAMig of CS 191 WFR1 2526.1.
 - Project Plan: [SALN App Project Plan.pdf](files/SALN%20App%20Project%20Plan.pdf)
 
 - Course Agreement: [Course-Agreement.pdf](files/Course-Agreement.pdf)
+
+- System Requirements Document: [SALN App System Requirement Document.pdf](files/SALN%20App%20System%20Requirement%20Document.pdf)
