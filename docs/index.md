@@ -2,6 +2,8 @@
 
 This is the group blog of team LAMig of CS 191 WFR1 2526.1.
 
+Link: [https://shirokamiqq.github.io/cs191-LAMig-GroupBlog/](https://shirokamiqq.github.io/cs191-LAMig-GroupBlog/)
+
 **Members**:
 
 - Lucas Agcaoili (lvagcaoili@up.edu.ph)
