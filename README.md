@@ -1,3 +1,7 @@
+# Link to Blog
+
+Link: [https://shirokamiqq.github.io/cs191-LAMig-GroupBlog/](https://shirokamiqq.github.io/cs191-LAMig-GroupBlog/)
+
 # How to Update Group Blog
 
 ## Environment Setup
