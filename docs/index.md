@@ -23,3 +23,5 @@ This is the group blog of team LAMig of CS 191 WFR1 2526.1.
 - Review Document (Reviewed: Group Power Puff Boys): [Review Document.pdf](files/Review%20Document.pdf)
 
 - Software Test Report (Reviewed By Power Puff Boys): [Software Test Report.pdf](files/Software%20Test%20Report.pdf)
+
+- Progress Report 1: [CS 192 Progress Report 01-30-2026.pdf](files/CS%20192%20Progress%20Report%2001-30-2026.pdf)
