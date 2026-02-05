@@ -27,3 +27,5 @@ This is the group blog of team LAMig of CS 191 WFR1 2526.1.
 - Progress Report 1: [CS 192 Progress Report 01-30-2026.pdf](files/CS%20192%20Progress%20Report%2001-30-2026.pdf)
 
 - Software Maintenance Plan: [CS 192 Software Maintenance Plan](files/CS%20192%20Software%20Maintenance%20Plan.pdf)
+
+- Progress Report 2: [CS 192 Progress Report 02-06-2026.pdf](files/CS%20192%20Progress%20Report%2002-06-2026.pdf)
