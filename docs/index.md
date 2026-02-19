@@ -31,3 +31,5 @@ This is the group blog of team LAMig of CS 191 WFR1 2526.1.
 - Progress Report 2: [CS 192 Progress Report 02-06-2026.pdf](files/CS%20192%20Progress%20Report%2002-06-2026.pdf)
 
 - Progress Report 3: [CS 192 Progress Report 02-13-2026.pdf](files/CS%20192%20Progress%20Report%2002-13-2026.pdf)
+
+- Progress Report 4: [CS 192 Progress Report 02-19-2026.pdf](files/CS%20192%20Progress%20Report%2002-19-2026.pdf)
