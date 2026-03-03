@@ -35,3 +35,5 @@ This is the group blog of team LAMig of CS 191 WFR1 2526.1.
 - Progress Report 4: [CS 192 Progress Report 02-19-2026.pdf](files/CS%20192%20Progress%20Report%2002-19-2026.pdf)
 
 - Progress Report 5: [CS 192 Progress Report 02-27-2026.pdf](files/CS%20192%20Progress%20Report%2002-27-2026.pdf)
+
+- 1st Project Evaluation by Client: [1st Project Evaluation By Client.pdf](files/Project_Evaluation_by_Client_1.pdf)
