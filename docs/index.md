@@ -40,4 +40,10 @@ This is the group blog of team LAMig of CS 191 WFR1 2526.1.
 
 - Progress Report 6: [CS 192 Progress Report 03-05-2026.pdf](files/CS%20192%20Progress%20Report%2003-05-2026.pdf)
 
-- Progress Report 6: [CS 192 Progress Report 03-12-2026.pdf](files/CS%20192%20Progress%20Report%2003-12-2026.pdf)
+- Progress Report 7: [CS 192 Progress Report 03-12-2026.pdf](files/CS%20192%20Progress%20Report%2003-12-2026.pdf)
+
+- Review Document (Reviewed TLE): [Review Document 03-19-2026.pdf](files/Review%20Document%2003-19-2026.pdf)
+
+- Software Test Report (Reviewed TLE) [Software Test Report 03-19-2026.pdf](files/Software%20Test%20Report%2003-19-2026.pdf)
+
+- Progress Report 8: [CS 192 Progress Report 03-19-2026.pdf](files/CS%20192%20Progress%20Report%2003-19-2026.pdf)
