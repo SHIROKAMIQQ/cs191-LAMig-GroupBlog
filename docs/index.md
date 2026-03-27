@@ -47,3 +47,5 @@ This is the group blog of team LAMig of CS 191 WFR1 2526.1.
 - Software Test Report (Reviewed TLE) [Software Test Report 03-19-2026.pdf](files/Software%20Test%20Report%2003-19-2026.pdf)
 
 - Progress Report 8: [CS 192 Progress Report 03-19-2026.pdf](files/CS%20192%20Progress%20Report%2003-19-2026.pdf)
+
+- Progress Report 9: [CS 192 Progress Report 03-27-2026.pdf](files/CS%20192%20Progress%20Report%2003-27-2026.pdf)
