@@ -2,14 +2,16 @@ site_name: LAMig Group Blog
 site_url: https://mydomain.org/
 nav:
   - CS 191/192 Deliverables: index.md
+  - Database Tables: Database
   - Backup/Reinstall Procedures: Backup.md
   - User's Manual: UserManual.md
   - Development Installation Instructions: DevInstallation.md
-  - Digital Ocean Setup Guide: DOSetup.md
+  - Digital Ocean Setup: DOSetup.md
   - Production Update: ProdUpdate.md
 theme:
   name: material
   features:
+    - navigation.expand
     - navigation.instant
     - navigation.instant.progress
     - navigation.tracking
