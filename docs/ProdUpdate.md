@@ -82,6 +82,11 @@ In the event that you have changes to the database schema (`database/migrations`
 php artisan migrate:fresh
 ```
 
+In the event you want to change the key `APP_KEY` from `.env` used by `Crypt`, run:
+```bash
+php artisan key:generate
+```
+
 ### MySQL Server
 Though the entire MySQL should already be setup from the [Digital Ocean Setup](DOSetup.md) page, you might want to keep note of these commands to do some sanity checks for the MySQL server:
 
