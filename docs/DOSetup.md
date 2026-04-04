@@ -13,7 +13,7 @@ You should also get these from the developers:
 - `saln-server/.env`
 - private `saln_ssh` and public `saln_ssh.pub` SSH key pair from the developers. Save these in `~/.ssh`.
 
-**NOTE:** Instructions for setting up the production repository will be in [Production Update](ProdUpdate.md)
+**NOTE:** Instructions for setting up the production repository will be in [Updating Production](ProdUpdate.md)
 
 ## Digital Ocean Droplet Access
 
