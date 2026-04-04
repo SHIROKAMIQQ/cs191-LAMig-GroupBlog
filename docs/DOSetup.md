@@ -315,8 +315,8 @@ To clear nginx logs: `sudo trunctate -s 0 /var/log/nginx/error.log`
 
 **ALWAYS** run `sudo systemctl reload nginx` when making changes to the nginx config files. 
 
-# SSL Certificate
-Do notice that the [NGINX Config](#NGINX-Config) for client has SSL certificates. For the sake of documentation, this is how we got them.
+## SSL Certificate
+Do notice that the [NGINX Config](#nginx-config) for client has SSL certificates. For the sake of documentation, this is how we got them.
 
 This assumes you have `snap` installed. Try `snap --version`.
 
