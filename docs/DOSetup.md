@@ -163,10 +163,15 @@ To install MySQL Server:
 sudo apt update
 sudo apt install mysql-server -y
 ```
-To start MySQL Server: `sudo service mysql start` \
-To check status: `sudo service mysql status` \
-To login locally: `sudo mysql -u root -p` \
-To stop MySQL Server: `sudo service mysql stop`
+
+You might want to keep note of these commands to do some sanity checks for the MySQL server:
+
+- To start MySQL Server: `sudo service mysql start` 
+- To check status: `sudo service mysql status` 
+- To login locally: `sudo mysql -u root -p` 
+- To stop MySQL Server: `sudo service mysql stop`
+
+From here, you could do MySQL queries directly to the database. Do note though that the source code uses the `Crypt` library of Laravel to encrypt stored database entries.
 
 ### Database Initialization
 Create `saln_app_DB` in MySQL and a user for Laravel migrations to use.

@@ -90,6 +90,8 @@ Though the entire MySQL should already be setup from the [Digital Ocean Setup](D
 - To login locally: `sudo mysql -u root -p` 
 - To stop MySQL Server: `sudo service mysql stop`
 
+From here, you could do MySQL queries directly to the database. Do note though that the source code uses the `Crypt` library of Laravel to encrypt stored database entries.
+
 ## NGINX Permissions
 
 We need to give nginx (www-data group) permissions to read/traverse through SALN-App.
