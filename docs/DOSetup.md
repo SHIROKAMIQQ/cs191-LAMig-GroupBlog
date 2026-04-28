@@ -186,14 +186,53 @@ FLUSH PRIVILEGES;
 
 Note that `<password>` must be kept secret. The current `<password>` is found in `saln-server/.env` as the `DB_PASSWORD` field for production. 
 
+### Automatic Backups
+
+Compressed backup files will live in `/var/backups/mysql`.
+```bash
+mkdir /var/backups/mysql
+```
+
+Then, we will make a bash script that creates a compressed backup of the database.
+```bash
+sudo nano /usr/local/bin/saln_app_db_backup.sh
+```
+```bash
+#!/bin/bash
+
+# CONFIGURATION
+DB_USER="<USER>"
+DB_PASSWORD="<PASSWORD>"
+DB_NAME="saln_app_DB"
+BACKUP_DIR="/var/backups/mysql"
+DATE=$(date +%m_%d_%Y)
+BACKUP_FILE="$BACKUP_DIR/${DB_NAME}_${DATE}.sql.gz"
+
+# RUN MYSQL DUMP + COMPRESS
+mysqldump --no-tablespaces -u "$DB_USER" -p"$DB_PASSWORD" "$DB_NAME" | gzip > "$BACKUP_FILE"
+
+# REMOVE BACKUPS OLDER THAN 30 DAYS
+find "$BACKUP_DIR" -type f -name "*.sql.gz" -mtime +30 -delete
+```
+Then, make the script executable
+```bash
+sudo chmod +x /usr/local/bin/saln_app_db_backup.sh 
+```
+
 ## Crontab
-This part sets up the cron job for scheduled tasks (like deleting 5-day old SALN Forms).
+This part sets up the cron job for scheduled tasks:
+
+- 5-day old SALN Form cleanup
+- Daily database backups
+
 ```bash
 crontab -e
 ```
-Then put this line on the bottom of the file
+
+Then put these lines on the bottom of the file
 ```
 * * * * * cd /var/www/SALN-App/saln-server && php artisan schedule:run >> /dev/null 2>&1
+0 2 * * * /usr/local/bin/mysql_backup.sh >> /var/log/mysql_backup.log 2>&1
 ```
 
 ## NGINX Setup
