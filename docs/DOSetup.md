@@ -205,7 +205,7 @@ DB_USER="<USER>"
 DB_PASSWORD="<PASSWORD>"
 DB_NAME="saln_app_DB"
 BACKUP_DIR="/var/backups/mysql"
-DATE=$(date +%m_%d_%Y)
+DATE=$(date +%Y_%m_%d)
 BACKUP_FILE="$BACKUP_DIR/${DB_NAME}_${DATE}.sql.gz"
 
 # RUN MYSQL DUMP + COMPRESS

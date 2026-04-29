@@ -7,6 +7,6 @@ The backups will each last for one month.
 
 You could choose a backup, unzip it, and then import it into MySQL.
 ```bash
-gunzip < saln_app_DB_MM_DD_YYYY.sql.gz > saln_app_DB_MM_DD_YYYY.sql
-mysql -u <USER> -p saln_app_DB < saln_app_DB_MM_DD_YYYY.sql
+gunzip < saln_app_DB_YYYY_MM_DD.sql.gz > saln_app_DB_YYYY_MM_DD.sql
+mysql -u <USER> -p saln_app_DB < saln_app_DB_YYYY_MM_DD.sql
 ```
