@@ -413,3 +413,89 @@ php artisan migrate:fresh
 sudo systemctl reload nginx
 sudo systemctl restart php8.4-fpm
 ```
+
+## .env Backup/Restore Setup
+
+`saln-server/.env` is not part of the Git repository since it contains keys that should remain secret. Instead, we will have its own version control on the VM. 
+
+### .env backup script
+
+We want .env backups to live on `/var/backups/saln-env`. This directory will have root-only access.
+```bash
+sudo mkdir /var/backups/saln-env
+sudo chown root:root /var/backups/saln-env
+sudo chmod 700 /var/backups/saln-env
+```
+
+In this backup script `env_backup`, we will take the current `.env` of our app and create an encrypted copy of it to be stored in `/var/backups/saln-env`.
+```bash
+sudo nano /usr/local/bin/env_backup
+```
+```bash
+#!/bin/bash
+
+set -e
+
+ENV_PATH="/var/www/SALN-App/saln-server/.env"
+BACKUP_DIR="/var/backups/saln-env"
+
+TIMESTAMP=$(date +"%Y_%m_%d_%H%M%S")
+OUTPUT_FILE="$BACKUP_DIR/.env_$TIMESTAMP.gpg"
+
+if [ ! -f "$ENV_PATH" ]; then
+  echo ".env file not found at $ENV_PATH"
+  exit 1
+fi
+
+gpg --symmetric --cipher-algo AES256 -o "$OUTPUT_FILE" "$ENV_PATH"
+
+chmod 600 "$OUTPUT_FILE"
+
+echo "Backup saved to $OUTPUT_FILE"
+```
+```bash
+sudo chmod +x /usr/local/bin/env_backup
+```
+
+### .env restore script
+
+Now in this restore script `env_restore YYYY_MM_DD_HH_MM_SS`, given a timestamp, we want to copy the decrypted contents of the corresponding `.env` backup into the current `saln-server/.env` file.
+```bash
+sudo nano /usr/local/bin/env-restore
+```
+```bash
+#!/bin/bash
+
+set -e
+
+BACKUP_DIR="/var/backups/saln-env"
+ENV_PATH="/var/www/SALN-App/saln-server/.env"
+
+if [ -z "$1" ]; then
+  echo "Usage: env-restore YYYY_MM_DD_HHMMSS"
+  exit 1
+fi
+
+TIMESTAMP="$1"
+INPUT_FILE="$BACKUP_DIR/.env_$TIMESTAMP.gpg"
+
+if [ ! -f "$INPUT_FILE" ]; then
+  echo "Backup not found: $INPUT_FILE"
+  exit 1
+fi
+
+TMP_FILE=$(mktemp)
+
+gpg -d "$INPUT_FILE" > "$TMP_FILE"
+cp "$TMP_FILE" "$ENV_PATH"
+
+chown root:www-data "$ENV_PATH"
+chmod 640 "$ENV_PATH"
+
+rm "$TMP_FILE"
+
+echo ".env restored from $TIMESTAMP"
+```
+```bash
+sudo chmod +x /usr/local/bin/env_restore
+```
