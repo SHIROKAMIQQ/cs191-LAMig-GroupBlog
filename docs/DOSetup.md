@@ -349,7 +349,7 @@ sudo ln -s /etc/nginx/sites-available/saln-server /etc/nginx/sites-enabled
 ```
 
 For checking nginx logs: open `/var/log/nginx/error.log` \
-To clear nginx logs: `sudo trunctate -s 0 /var/log/nginx/error.log`
+To clear nginx logs: `sudo truncate -s 0 /var/log/nginx/error.log`
 
 **ALWAYS** run `sudo systemctl reload nginx` when making changes to the nginx config files. 
 
