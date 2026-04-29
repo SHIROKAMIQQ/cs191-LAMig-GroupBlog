@@ -232,7 +232,7 @@ crontab -e
 Then put these lines on the bottom of the file
 ```
 * * * * * cd /var/www/SALN-App/saln-server && php artisan schedule:run >> /dev/null 2>&1
-0 2 * * * /usr/local/bin/mysql_backup.sh >> /var/log/mysql_backup.log 2>&1
+0 2 * * * /usr/local/bin/saln_app_db_backup.sh >> /var/log/mysql_backup.log 2>&1
 ```
 
 ## NGINX Setup
