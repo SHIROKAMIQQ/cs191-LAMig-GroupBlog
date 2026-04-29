@@ -353,7 +353,7 @@ To clear nginx logs: `sudo trunctate -s 0 /var/log/nginx/error.log`
 
 **ALWAYS** run `sudo systemctl reload nginx` when making changes to the nginx config files. 
 
-## SSL Certificate
+### SSL Certificate
 Do notice that the [NGINX Config](#nginx-config) for client has SSL certificates. For the sake of documentation, this is how we got them.
 
 This assumes you have `snap` installed. Try `snap --version`.
@@ -362,4 +362,54 @@ This assumes you have `snap` installed. Try `snap --version`.
 snap install --classic certbot
 certbot --nginx
 sudo systemctl reload nginx
+```
+
+## Cloning the Repository
+
+Using git, we will clone the repository into `/var/www/SALN-App`
+```bash
+cd /var/www
+git clone https://github.com/SHIROKAMIQQ/SALN-App.git
+cd SALN-App
+```
+
+Make sure to put in `saln-server/.env`. You can get this file from the developers.
+
+### Permissions
+We want `root` to own the repository, but we also want `www-data` (nginx and php8.4-fpm) to be able to read (and write for some parts) to the repository.
+```bash
+sudo chown -R root:www-data /var/www/SALN-App
+sudo find /var/www/SALN-App -type d -exec chmod 775 {} \;
+sudo find /var/www/SALN-App -type f -exec chmod 664 {} \;
+sudo find /var/www/SALN-App -type d -exec chmod g+s {} \;
+sudo chmod -R 775 saln-server/storage
+sudo chmod -R 775 saln-server/bootstrap/cache
+sudo chmod 640 /var/www/SALN-App/saln-server/.env
+```
+
+### Insall Node dependencies and serving node
+
+We want to install the node dependencies used. Then, we want to build the static code of our client subrepository. Then, using `pm2` we will create a process that serves this.
+```bash
+cd saln-client
+npm install
+npm run build
+pm2 start dist/index.mjs --name saln-client --max-memory-restart 200M
+pm2 save
+pm2 startup
+```
+
+Additionally, you have these tools for checking logs and active processes from pm2: `pm2 list`, `pm2 logs saln-client`, `pm2 status`.
+
+### Installing Composer dependencies and serving server-side APIs
+
+We want to install composer dependencies used. Then, we will leave serving to nginx and php8.4-fpm.
+```bash
+cd saln-server
+composer install
+php artisan config:clear
+php artisan cache:clear
+php artisan migrate:fresh
+sudo systemctl reload nginx
+sudo systemctl restart php8.4-fpm
 ```

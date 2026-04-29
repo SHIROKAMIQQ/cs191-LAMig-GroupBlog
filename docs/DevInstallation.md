@@ -64,6 +64,14 @@ cd saln-client
 npm install
 ```
 
+### Configure for development
+
+In `saln-client/src/api/config.js`, configure `API_BASE_URL` to use localhost.
+```js
+// FOR DEV:
+export const API_BASE_URL = "http://127.0.0.1:8000/api";
+```
+
 ### Running Client
 `npm run dev` must be run in the `saln-client` directory.
 ```bash
