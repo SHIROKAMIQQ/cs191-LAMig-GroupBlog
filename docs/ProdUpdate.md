@@ -32,7 +32,6 @@ pm2 startup
 
 ## Updating Server-Side
 
-### Installing PHP dependencies
 In the event that you have new Composer dependencies:
 ```bash
 cd /var/www/SALN-App/saln-server
