@@ -49,3 +49,9 @@ Some useful commands:
 - `php artisan migrate` - migrate database. Data is kept. Used for small table alterations
 - `php artisan migrate:fresh` - migrate database. Data is not kept. Used for breaking schema changes.
 - `php artisan key:generate` - change the `APP_KEY` in the `.env` file used by `Crypt`.
+
+In the event that you want to update `saln-server/.env`, you might want to back it up first via the `env_backup` command. 
+```bash
+env_backup
+```
+Refer to [.env Backup and Restoration Procedure](Backup.md#env-backup-and-restoration-procedure) on how the workflow of .env backup and restoration. 
