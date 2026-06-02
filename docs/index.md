@@ -63,3 +63,5 @@ This is the group blog of team LAMig of CS 191 WFR1 2526.1.
 - 3rd Project Evaluation by Client: [Project_Evaluation_by_Client_3.pdf](files/Project_Evaluation_by_Client_3.pdf)
 
 - SAMPLE [saln.json](files/saln.json)
+
+- Updated Documentation: [CS 192 Updated Documentation.pdf](files/CS%20192%20Updated%Documentatoin.pdf)
