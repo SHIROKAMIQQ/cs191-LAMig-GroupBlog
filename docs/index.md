@@ -64,4 +64,4 @@ This is the group blog of team LAMig of CS 191 WFR1 2526.1.
 
 - SAMPLE [saln.json](files/saln.json)
 
-- Updated Documentation: [CS 192 Updated Documentation.pdf](files/CS%20192%20Updated%Documentatoin.pdf)
+- Updated Documentation: [Documentation.pdf](files/Documentation.pdf)
